@@ -6,6 +6,16 @@
         "Action": "logs:*",
         "Effect": "Allow",
         "Resource": "*"
-      }
+     }, {
+        "Sid": "Stmt163546987326",
+        "Action":[
+            "s3:GetObject",
+            "s3:ListBucket",
+            "s3:PutObject"
+          ],
+        "Effect": "Allow",
+        "Resource": "arn:aws:s3:::newbucket-lambda-2021"  
+      }  
+
     ]
   }
